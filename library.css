@@ -1,0 +1,64 @@
+h1 {
+    text-align: center;
+    background-color: lightcoral;
+}
+
+input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.switch {
+    display: block;
+    width: 4em;
+    height: 2em;
+    background-color: #477a85;
+    border-radius: 2em;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+}
+
+.switch::before {
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #e8f5f7;
+    position: absolute;
+    border-radius: 50%;
+    transition: 0.5s;
+    left: .25em;
+}
+
+input:checked+.switch::before {
+    transform: translateX(2em);
+}
+
+input:checked+.switch {
+    background-color: rgb(87, 190, 87);
+}
+
+.switch:active:before {
+    width: 2em;
+}
+
+.bookCard {
+    display: inline-block;
+    background-color: navy;
+    color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightcoral;
+    margin: 0.5em;
+    width: 15em;
+    height: 8em;
+    line-height: 1.5em;
+}
+
+#delete {
+    margin: 0.5em;
+    float: right;
+}
